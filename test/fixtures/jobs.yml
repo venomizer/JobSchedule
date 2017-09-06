@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jobNum: 1
+  poDate: 2017-09-01 16:58:54
+  customer: MyString
+  description: MyText
+  needBom: false
+  bomDone: false
+  status: 1
+  progress: MyText
+  priority: 1
+
+two:
+  jobNum: 1
+  poDate: 2017-09-01 16:58:54
+  customer: MyString
+  description: MyText
+  needBom: false
+  bomDone: false
+  status: 1
+  progress: MyText
+  priority: 1
