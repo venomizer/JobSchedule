@@ -350,6 +350,16 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jbuilder-2.7.0/gemfiles" />
       </SOURCES>
     </library>
+    <library name="jquery-rails (v4.3.1, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor" />
+      </SOURCES>
+    </library>
     <library name="loofah (v2.0.3, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/loofah-2.0.3/lib" />
@@ -438,6 +448,14 @@
       </CLASSES>
       <SOURCES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/multi_json-1.12.1/lib" />
+      </SOURCES>
+    </library>
+    <library name="multi_json (v1.12.2, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/multi_json-1.12.2/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/multi_json-1.12.2/lib" />
       </SOURCES>
     </library>
     <library name="net-telnet (v0.1.1, ruby-2.4.1-p111) [gem]">
