@@ -1,0 +1,39 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="ruby-2.4.1-p111" />
+      <type value="RUBY_SDK" />
+      <version value="ver.2.4.1p0" />
+      <homePath value="C:/Ruby24-x64/bin/ruby.exe" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/site_ruby/2.4.0" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/site_ruby" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/vendor_ruby/2.4.0" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/vendor_ruby/2.4.0/x64-msvcrt" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/vendor_ruby" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/2.4.0" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/2.4.0/x64-mingw32" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/rubystubs24" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite">
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/site_ruby/2.4.0" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/site_ruby" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/vendor_ruby/2.4.0" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/vendor_ruby/2.4.0/x64-msvcrt" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/vendor_ruby" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/2.4.0" />
+            <root type="simple" url="file://C:/Ruby24-x64/lib/ruby/2.4.0/x64-mingw32" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/rubystubs24" />
+          </root>
+        </sourcePath>
+      </roots>
+      <additional NORMALIZED_VERSION_STRING="ver.2.4.1p0" PLATFORM="x64-mingw32" IS_RVM_SDK="false" RVM_IGNORE_GLOBAL="false" GEMS_BIN_DIR_PATH="C:\Ruby24-x64\bin" />
+    </jdk>
+  </component>
+</application>
