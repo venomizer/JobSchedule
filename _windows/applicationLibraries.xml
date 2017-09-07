@@ -360,6 +360,16 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor" />
       </SOURCES>
     </library>
+    <library name="jquery-ui-rails (v6.0.1, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/lib" />
+      </SOURCES>
+    </library>
     <library name="loofah (v2.0.3, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/loofah-2.0.3/lib" />
