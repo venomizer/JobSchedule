@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.order('priority')
   end
 
   # GET /jobs/1
@@ -58,6 +58,16 @@ class JobsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def sort
+    params[:job].each_with_index do |id, index|
+      Job.where(id: id).update_all(priority: index+1)
+    end
+    respond_to do |format|
+      format.html {redirect_to jobs_url}
+      format.json {head :ready}
     end
   end
 

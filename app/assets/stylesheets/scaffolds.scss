@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  width: 100%;
   background-color: SlateGray;
   background: no-repeat;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1e), to(#ffd400));
@@ -14,14 +14,13 @@ html {
 }
 
 body {
-  height: 100%;
+  width: 100%;
   background: transparent;
   text-align: center;
   color: White;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  overflow: auto;
 }
 
 p, ol, ul, td {
@@ -100,40 +99,42 @@ div {
 label {
   display: block;
 }
-
-div.jobTable {
-  display: table;
-  left: 10%;
-  width: 80%;
-  height: 70%;
-  overflow: auto;
-  position: relative;
-  margin-bottom: 2%;
+@media screen and (min-width: 800px) {
+  div.jobTable {
+    display: table;
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+    box-sizing: -moz-box-sizing(border-box);
+    box-sizing: -webkit-box-sizing(border-box);
+  }
 }
 
 div.tableHeader {
   display: table-header-group;
-  width: 100%;
+  width: 80%;
   background-color: #222222;
 }
 
 div.dataColumn {
   display: table-cell;
-  width: 12%;
   text-align: center;
-  padding: 10px;
+  width: 12%;
+  padding: 9px;
+  word-wrap: break-word;
 }
 
 div.tableRows {
   display: table-row-group;
-  width: 100%;
   vertical-align: middle;
 }
 
 div.data {
   display: table-cell;
-  width: 12%;
   vertical-align: middle;
+  word-wrap: break-word;
+  width: 12%;
 }
 
 div.jobItemsRow {
@@ -142,14 +143,32 @@ div.jobItemsRow {
 
 div.odd {
   display: table-row;
-  width: 100%;
   background-color: #ffd400;
   color: black;
 }
 
 div.even{
   display: table-row;
-  width: 100%;
   background-color: #777777;
   color: white;
+}
+
+#sticky {
+  display: none;
+  background-color: #222222;
+}
+
+@media screen and (min-width: 800px) {
+  #sticky.stick {
+    margin-top: 0 !important;
+    display: table-header-group;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    overflow: visible;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

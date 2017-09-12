@@ -1,0 +1,59 @@
+<%= javascript_include_tag 'application' %>
+<div id="sticky-anchor">
+  <div id="sticky" class="tableHeader">
+    <div class="dataColumn">Job Number</div>
+    <div class="dataColumn">P.O. Date</div>
+    <div class="dataColumn">Customer</div>
+    <div class="dataColumn">Description</div>
+    <div class="dataColumn">Need BOM</div>
+    <div class="dataColumn">BOM done?</div>
+    <div class="dataColumn">Status</div>
+    <div class="dataColumn">Progress</div>
+    <div class="dataColumn">Priority</div>
+    <div class="dataColumn">show</div>
+    <div class="dataColumn">edit</div>
+    <div class="dataColumn">destroy</div>
+  </div>
+</div>
+
+<div class="tableHeader">
+  <div class="dataColumn">Job Number</div>
+  <div class="dataColumn">P.O. Date</div>
+  <div class="dataColumn">Customer</div>
+  <div class="dataColumn">Description</div>
+  <div class="dataColumn">Need BOM</div>
+  <div class="dataColumn">BOM done?</div>
+  <div class="dataColumn">Status</div>
+  <div class="dataColumn">Progress</div>
+  <div class="dataColumn">Priority</div>
+  <div class="dataColumn">show</div>
+  <div class="dataColumn">edit</div>
+  <div class="dataColumn">destroy</div>
+</div>
+
+<div class="tableRows">
+  <% @jobs.each do |job| %>
+    <div class="<%= job.priority.odd? ? 'odd' : 'even' %>">
+      <div class="data"><%= job.jobNum %></div>
+      <div class="data"><%= job.poDate %></div>
+      <div class="data"><%= job.customer %></div>
+      <div class="data"><%= job.description %></div>
+      <% if job.needBom? %>
+          <div class="data">Yes</div>
+      <% else %>
+          <div class="data">No</div>
+      <% end %>
+      <% if job.bomDone? %>
+          <div class="data">Yes</div>
+      <% else %>
+          <div class="data">No</div>
+      <% end %>
+      <div class="data"><%= job.status %></div>
+      <div class="data"><%= job.progress %></div>
+      <div class="data" data-priority="<%= job.priority %>"><%= job.priority %></div>
+      <div class="data"><%= link_to 'Show', job %></div>
+      <div class="data"><%= link_to 'Edit', edit_job_path(job) %></div>
+      <div class="data"><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    </div>
+  <% end %>
+</div>

@@ -13,3 +13,34 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+
+function sticky_relocate() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top;
+    if (window_top > div_top) {
+        $('#sticky').addClass('stick');
+        $('#sticky-anchor').height($('#sticky').outerHeight());
+    } else {
+        $('#sticky').removeClass('stick');
+        $('#sticky-anchor').height(0);
+    }
+}
+
+$(function() {
+    $(window).scroll(sticky_relocate);
+    sticky_relocate();
+    $('#sortable').sortable();
+    $('sortable').sortable({
+        update: function(event, ui){
+            $.post(
+                $(this).data('update-url'),
+                $(this).sortable('serialize')
+            )
+        }
+    });
+
+})(jQuery);
+
