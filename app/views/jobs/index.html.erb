@@ -1,5 +1,7 @@
 <body>
+<div>
 <%= javascript_include_tag 'application' %>
+</div>
   <p id="notice"><%= notice %></p>
   <h2>Current Open Jobs</h2>
 
@@ -61,7 +63,7 @@
         <div class="data"><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>
     <% end %>
-    </div>d
+    </div>
   </div>
 
   <br>

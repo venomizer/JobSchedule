@@ -33,11 +33,17 @@ $(function() {
     $(window).scroll(sticky_relocate);
     sticky_relocate();
     $('#sortable').sortable();
-    $('sortable').sortable({
+    $('#sortable').sortable({
+        axis: 'y',
+        start: function(event, ui){
+            $(ui.item).data('old-index', ui.item.index());
+        },
         update: function(event, ui){
+            var oldPriority = $(ui.item).data('old-index');
+            var newPriority = ui.item.index();
             $.post(
                 $(this).data('update-url'),
-                $(this).sortable('serialize')
+                {oldPriority: oldPriority, newPriority: newPriority}
             )
         }
     });

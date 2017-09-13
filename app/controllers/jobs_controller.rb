@@ -62,9 +62,14 @@ class JobsController < ApplicationController
   end
 
   def sort
-    params[:job].each_with_index do |id, index|
-      Job.where(id: id).update_all(priority: index+1)
-    end
+    old_priority = params[:oldPriority].to_i+1
+    new_priority = params[:newPriority].to_i+1
+    @job = Job.find_by_priority(old_priority)
+    @job.update_attribute(:priority, new_priority)
+#    Job.where()
+#     params[:priority].each_with_index do |id, index|
+#      # Job.where(id: id).update_all(priority: index+1)
+#     end
     respond_to do |format|
       format.html {redirect_to jobs_url}
       format.json {head :ready}

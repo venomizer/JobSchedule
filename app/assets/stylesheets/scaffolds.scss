@@ -1,5 +1,10 @@
 html {
   width: 100%;
+
+}
+
+body {
+  width: 100%;
   background-color: SlateGray;
   background: no-repeat;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1e), to(#ffd400));
@@ -7,15 +12,8 @@ html {
   background-image:    -moz-linear-gradient(bottom, #1a1a1e, #ffd400);
   background-image:     -ms-linear-gradient(bottom, #1a1a1e, #ffd400);
   background-image:      -o-linear-gradient(bottom, #1a1a1e, #ffd400);
-  background: -webkit-background-size(cover);
-  background: -moz-background-size(cover);
   -o-background-size: cover;
   background-size: cover;
-}
-
-body {
-  width: 100%;
-  background: transparent;
   text-align: center;
   color: White;
   font-family: verdana, arial, helvetica, sans-serif;
