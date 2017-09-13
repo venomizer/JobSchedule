@@ -194,6 +194,16 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib" />
       </SOURCES>
     </library>
+    <library name="debase (v0.2.1, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.1/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.1/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.1/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.1/lib" />
+      </SOURCES>
+    </library>
     <library name="debase (v0.2.2.beta10, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.2.beta10/ext" />
@@ -700,6 +710,18 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta4/bin" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta4/ext" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta4/lib" />
+      </SOURCES>
+    </library>
+    <library name="ruby-debug-ide (v0.6.1.beta9, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta9/bin" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta9/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta9/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta9/bin" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta9/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta9/lib" />
       </SOURCES>
     </library>
     <library name="ruby-progressbar (v1.8.1, ruby-2.4.1-p111) [gem]">
