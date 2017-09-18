@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  partNum: MyString
+  description: MyText
+  quanitity: 1
+  totalQuantity: 1
+  workOrder: MyString
+  finish: false
+
+two:
+  partNum: MyString
+  description: MyText
+  quanitity: 1
+  totalQuantity: 1
+  workOrder: MyString
+  finish: false
