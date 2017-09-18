@@ -10,12 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery-ui
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
-//= require jquery
 //= require jquery_ujs
-//= require jquery-ui
+//= require_tree .
+
 
 function sticky_relocate() {
     var window_top = $(window).scrollTop();
@@ -32,7 +33,9 @@ function sticky_relocate() {
 $(function() {
     $(window).scroll(sticky_relocate);
     sticky_relocate();
-    $('#sortable').sortable();
+
+    $(this).find('.parts-block').hide();
+
     $('#sortable').sortable({
         axis: 'y',
         start: function(event, ui){
@@ -41,12 +44,21 @@ $(function() {
         update: function(event, ui){
             var oldPriority = $(ui.item).data('old-index');
             var newPriority = ui.item.index();
-            $.post(
-                $(this).data('update-url'),
-                {oldPriority: oldPriority, newPriority: newPriority}
-            )
+            $.ajax({
+                type: 'put',
+                url: 'jobs/sort',
+                data: {oldPriority: oldPriority, newPriority: newPriority}
+            });
         }
     });
 
-})(jQuery);
+    $('.job-block')
+        .addClass('ui-widget ui-widget-content ui-helper-clearfix ui-corner-all')
+        .find('.row').addClass('ui-widget-header').end().find('.parts-block');
+
+    $('.row').click(function(){
+        $(this).parents('.job-block:first').find('.parts-block').toggle('fade', 'fast');
+    });
+
+});
 

@@ -1,6 +1,23 @@
 <h1>Editing Job</h1>
 
-<%= render 'form', job: @job %>
+<div>
+  <%= render 'form', job: @job %>
+</div>
+<div>
+  <%= link_to 'New Part', new_job_part_path(@job) %>
+  <div class="tableHeader">
+    <div class="dataColumn">Part Number</div>
+    <div class="dataColumn">Description</div>
+    <div class="dataColumn">Quantity</div>
+    <div class="dataColumn">Total Quantity</div>
+    <div class="dataColumn">Work Order</div>
+    <div class="dataColumn">Finished?</div>
+  </div>
+
+  <div>
+    <%= render partial: 'parts/index' %>
+  </div>
+</div>
 
 <%= link_to 'Show', @job %> |
 <%= link_to 'Back', jobs_path %>

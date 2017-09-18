@@ -1,11 +1,12 @@
 html {
   width: 100%;
-
+  min-height: 100%;
 }
 
 body {
   width: 100%;
-  background-color: SlateGray;
+  height: 100%;
+  background-color: #1a1a1e;
   background: no-repeat;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a1a1e), to(#ffd400));
   background-image: -webkit-linear-gradient(bottom, #1a1a1e, #ffd400);
@@ -111,7 +112,6 @@ label {
 
 div.tableHeader {
   display: table-header-group;
-  width: 80%;
   background-color: #222222;
 }
 
@@ -124,7 +124,6 @@ div.dataColumn {
 }
 
 div.tableRows {
-  display: table-row-group;
   vertical-align: middle;
 }
 
@@ -135,20 +134,29 @@ div.data {
   width: 12%;
 }
 
-div.jobItemsRow {
+div.job-block {
+  display: table-row-group;
+}
 
+div.row {
+  display: table-row;
+  height: 60px;
+  width: 100%;
 }
 
 div.odd {
-  display: table-row;
   background-color: #ffd400;
   color: black;
 }
 
 div.even{
-  display: table-row;
   background-color: #777777;
   color: white;
+}
+
+div.parts-block {
+  display: table-row;
+  background-color: #1a1a1e;
 }
 
 #sticky {
