@@ -1,65 +1,64 @@
-<div id="sortable" class="tableRows">
-  <% @jobs.each do |job| %>
-      <div class="job-block">
-        <div id="job_<%= job.id %>" class="<%= job.priority.odd? ? 'odd' : 'even' %> row"  data-update-url="<%= job.id %>">
-          <div class="data"><%= job.jobNum %></div>
-          <div class="data"><%= job.poDate %></div>
-          <div class="data"><%= job.customer %></div>
-          <div class="data"><%= job.description %></div>
-          <% if job.needBom? %>
-              <div class="data">Yes</div>
-          <% else %>
-              <div class="data">No</div>
-          <% end %>
-          <% if job.bomDone? %>
-              <div class="data">Yes</div>
-          <% else %>
-              <div class="data">No</div>
-          <% end %>
-          <div class="data"><%= job.status %></div>
-          <div class="data"><%= job.progress %></div>
-          <div class="data"><%= job.priority %></div>
-          <div class="data"><%= link_to 'Show', job %></div>
-          <div class="data"><%= link_to 'Edit', edit_job_path(job) %></div>
-          <div class="data"><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        </div>
-        <div class="parts-block">
-          <div class="data">Item Number</div>
-          <div class="data">Part Number</div>
-          <div class="data">Description</div>
-          <div class="data">Quantity</div>
-          <div class="data">Total Quantity</div>
-          <div class="data">Work Order</div>
-          <div class="data"></div>
-          <div class="data">Finished?</div>
-          <div class="data"></div>
-          <div class="data"></div>
-          <div class="data"></div>
-          <div class="data"></div>
-
-
-          <% job.parts.each do |part| %>
-              <div id="job_<%= part.job_id %>_part_<%= part.id %>" class="row">
-                <div class="data"><%= part.id %></div>
-                <div class="data"><%= part.partNum %></div>
-                <div class="data"><%= part.description %></div>
-                <div class="data"><%= part.quantity %></div>
-                <div class="data"><%= part.totalQuantity %></div>
-                <div class="data"><%= part.workOrder %></div>
-
-                <% if part.finished? %>
-                    <div class="data">Yes</div>
-                <% else %>
-                    <div class="data">No</div>
-                <% end %>
-                <div class="data"></div>
-                <div class="data"></div>
-                <div class="data"></div>
-              </div>
-          <% end %>
-        </div>
+<% @jobs.each do |job| %>
+    <div class="job-block">
+      <div id="job_<%= job.id %>" class="<%= job.priority.odd? ? 'odd' : 'even' %> row"  data-update-url="<%= job.id %>">
+        <div class="data"><%= job.jobNum %></div>
+        <div class="data"><%= job.poDate %></div>
+        <div class="data"><%= job.customer %></div>
+        <div class="data"><%= job.description %></div>
+        <% if job.needBom? %>
+            <div class="data">Yes</div>
+        <% else %>
+            <div class="data">No</div>
+        <% end %>
+        <% if job.bomDone? %>
+            <div class="data">Yes</div>
+        <% else %>
+            <div class="data">No</div>
+        <% end %>
+        <div class="data"><%= job.status %></div>
+        <div class="data"><%= job.progress %></div>
+        <div class="data"><%= job.priority %></div>
+        <div class="data hidden">show</div>
+        <div class="data"><%= link_to 'Edit', edit_job_path(job) %></div>
+        <div class="data"><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        <div class="ui-icon ui-icon-minusthick toggle"></div>
       </div>
+      <div class="parts-block">
+        <div class="data">Item Number</div>
+        <div class="data">Part Number</div>
+        <div class="data">Description</div>
+        <div class="data">Quantity</div>
+        <div class="data">Total Quantity</div>
+        <div class="data">Work Order</div>
+        <div class="data"></div>
+        <div class="data">Finished?</div>
+        <div class="data"></div>
+        <div class="data"></div>
+        <div class="data"></div>
+        <div class="data"></div>
 
 
-  <% end %>
-</div>
+        <% job.parts.each do |part| %>
+            <div id="job_<%= part.job_id %>_part_<%= part.id %>" class="row">
+              <div class="data"><%= part.id %></div>
+              <div class="data"><%= part.partNum %></div>
+              <div class="data"><%= part.description %></div>
+              <div class="data"><%= part.quantity %></div>
+              <div class="data"><%= part.totalQuantity %></div>
+              <div class="data"><%= part.workOrder %></div>
+
+              <% if part.finished? %>
+                  <div class="data">Yes</div>
+              <% else %>
+                  <div class="data">No</div>
+              <% end %>
+              <div class="data"></div>
+              <div class="data"></div>
+              <div class="data"></div>
+            </div>
+        <% end %>
+      </div>
+    </div>
+
+
+<% end %>

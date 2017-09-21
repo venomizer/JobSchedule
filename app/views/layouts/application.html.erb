@@ -5,11 +5,20 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-eval': false %>
     <%= favicon_link_tag 'favicon' %>
   </head>
 
   <body>
+  <ul class="nav-bar">
+    <li class="nav-tab"><%= link_to 'Jobs', jobs_url %></li>
+    <li class="nav-tab">Reports</li>
+    <li class="nav-tab">Locations</li>
+    <%= yield(:local_menu) %>
+  </ul>
+  <br />
+  <br />
+  <br />
   <h1><%= image_tag 'rentzelpumpclean_0'%></h1>
   <div>
     <%= yield %>

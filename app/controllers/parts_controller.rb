@@ -10,6 +10,7 @@ class PartsController < ApplicationController
   # GET /parts/1
   # GET /parts/1.json
   def show
+    @job = Job.find(params[:id])
     @part = @job.parts.find(params[:id])
 
     respond_to do |format|
@@ -20,6 +21,7 @@ class PartsController < ApplicationController
 
   # GET /parts/new
   def new
+    @job = Job.find(params[:job_id])
     @part = @job.parts.build
 
     respond_to do |format|

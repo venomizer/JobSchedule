@@ -35,7 +35,7 @@ pre {
 }
 
 a {
-  color: #000;
+  color: whitesmoke;
 
   &:visited {
   }
@@ -113,6 +113,7 @@ label {
 div.tableHeader {
   display: table-header-group;
   background-color: #222222;
+  width: 80%;
 }
 
 div.dataColumn {
@@ -132,6 +133,7 @@ div.data {
   vertical-align: middle;
   word-wrap: break-word;
   width: 12%;
+  padding: 9px;
 }
 
 div.job-block {
@@ -169,7 +171,7 @@ div.parts-block {
     margin-top: 0 !important;
     display: table-header-group;
     position: fixed;
-    top: 0;
+    top: 58px;
     z-index: 10000;
     overflow: visible;
   }
@@ -177,4 +179,37 @@ div.parts-block {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.placeholder {
+  border: 1px dotted black;
+  margin: 1%;
+  height: 100px;
+}
+
+.hidden {
+  color: transparent;
+  user-select: none;
+}
+
+.nav-bar {
+  width: 100%;
+  background-color: #1a1a1e;
+  list-style-type: none;
+  padding: 0;
+  position: fixed;
+  margin-top: 0 !important;
+  top: 0;
+}
+
+.nav-tab {
+  display: inline;
+  float: left;
+  padding: 20px;
+}
+
+.local-nav-tab {
+  display: inline;
+  float: right;
+  padding: 20px;
 }
