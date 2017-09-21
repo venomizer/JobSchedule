@@ -1,0 +1,33 @@
+<div class="part-data">Item Number</div>
+<div class="part-data">Part Number</div>
+<div class="part-data">Description</div>
+<div class="part-data">Quantity</div>
+<div class="part-data">Total Quantity</div>
+<div class="part-data">Work Order</div>
+<div class="empty part-data"></div>
+<div class="part-data">Finished?</div>
+<div class="empty part-data"></div>
+<div class="empty part-data"></div>
+<div class="empty part-data"></div>
+<div class="empty part-data"></div>
+
+
+<% job.parts.each do |part| %>
+    <div id="job_<%= part.job_id %>_part_<%= part.id %>" class="row">
+      <div class="part-data"><%= part.id %></div>
+      <div class="part-data"><%= part.partNum %></div>
+      <div class="part-data"><%= part.description %></div>
+      <div class="part-data"><%= part.quantity %></div>
+      <div class="part-data"><%= part.totalQuantity %></div>
+      <div class="part-data"><%= part.workOrder %></div>
+
+      <% if part.finished? %>
+          <div class="part-data">Yes</div>
+      <% else %>
+          <div class="part-data">No</div>
+      <% end %>
+      <div class="empty"></div>
+      <div class="empty"></div>
+      <div class="empty"></div>
+    </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Partnum:</strong>
+  <%= @part.partNum %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @part.description %>
+</p>
+
+<p>
+  <strong>Quanitity:</strong>
+  <%= @part.quanitity %>
+</p>
+
+<p>
+  <strong>Totalquantity:</strong>
+  <%= @part.totalQuantity %>
+</p>
+
+<p>
+  <strong>Workorder:</strong>
+  <%= @part.workOrder %>
+</p>
+
+<p>
+  <strong>Finish:</strong>
+  <%= @part.finish %>
+</p>
+
+<%= link_to 'Edit', edit_part_path(@part) %> |
+<%= link_to 'Back', parts_path %>

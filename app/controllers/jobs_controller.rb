@@ -1,10 +1,10 @@
 class JobsController < ApplicationController
-  before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :load_parts, :set_job, only: [:show, :edit, :update, :destroy]
 
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.all.preload(:parts)
   end
 
   # GET /jobs/1
@@ -61,10 +61,22 @@ class JobsController < ApplicationController
     end
   end
 
+  def sort
+    @jobs = Job.all.preload(:parts)
+    old_priority = params[:oldPriority].to_i+1
+    new_priority = params[:newPriority].to_i+1
+    @job = Job.find_by_priority(old_priority)
+    @job.update_attribute(:priority, new_priority)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_job
       @job = Job.find(params[:id])
+    end
+
+    def load_parts
+      @parts = Part.all.includes(:job)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170905182337) do
+ActiveRecord::Schema.define(version: 20170915195726) do
 
   create_table "jobs", force: :cascade do |t|
     t.integer "jobNum"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20170905182337) do
     t.integer "priority"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "parts", force: :cascade do |t|
+    t.string "partNum"
+    t.text "description"
+    t.integer "totalQuantity"
+    t.string "workOrder"
+    t.boolean "finish"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "job_id"
+    t.integer "quantity"
+    t.index ["job_id"], name: "index_parts_on_job_id"
   end
 
 end
