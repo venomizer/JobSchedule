@@ -67,6 +67,10 @@ class JobsController < ApplicationController
     new_priority = params[:newPriority].to_i+1
     @job = Job.find_by_priority(old_priority)
     @job.update_attribute(:priority, new_priority)
+
+    respond_to do |format|
+      format.js {render inline: 'location.reload();'}
+    end
   end
 
   private

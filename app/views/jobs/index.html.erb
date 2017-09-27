@@ -1,4 +1,10 @@
-  <p id="notice"><%= notice %></p>
+<% content_for :local_menu do %>
+    <li class="local-nav-tab">Universal Parts</li>
+    <li class="local-nav-tab">Job Report</li>
+    <li class="local-nav-tab"><%= link_to 'New Job', new_job_path %></li>
+<% end %>
+
+<p id="notice"><%= notice %></p>
   <h2>Current Open Jobs</h2>
 
   <div class="jobTable">
@@ -13,7 +19,7 @@
         <div class="dataColumn">Status</div>
         <div class="dataColumn">Progress</div>
         <div class="dataColumn">Priority</div>
-        <div class="dataColumn">show</div>
+        <div class="dataColumn hidden">show</div>
         <div class="dataColumn">edit</div>
         <div class="dataColumn">destroy</div>
       </div>
@@ -29,15 +35,13 @@
       <div class="dataColumn">Status</div>
       <div class="dataColumn">Progress</div>
       <div class="dataColumn">Priority</div>
-      <div class="dataColumn">show</div>
+      <div class="dataColumn hidden">show</div>
       <div class="dataColumn">edit</div>
       <div class="dataColumn">destroy</div>
     </div>
 
+    <div id="sortable" class="tableRows">
       <%= render 'index', locals: {jobs: @jobs} %>
-
+    </div>
   </div>
-
   <br />
-
-  <div><%= link_to 'New Job', new_job_path %></div>
