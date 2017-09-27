@@ -1,13 +1,21 @@
 <% content_for :local_menu do %>
-    <li class="local-nav-tab">Universal Parts</li>
-    <li class="local-nav-tab">Job Report</li>
-    <li class="local-nav-tab"><%= link_to 'New Job', new_job_path %></li>
+    <%= link_to  jobs_path do %>
+        <li class="local-nav-tab">Universal Parts</li>
+    <% end %>
+    <%= link_to jobs_path(finished: true) do %>
+        <li class="local-nav-tab">Finished Jobs</li>
+    <% end %>
+    <%= link_to  jobs_path do %>
+        <li class="local-nav-tab">New Job Report</li>
+    <% end %>
+    <%= link_to  new_job_path do %>
+        <li class="local-nav-tab">New Job</li>
+    <% end %>
 <% end %>
 
 <p id="notice"><%= notice %></p>
-  <h2>Current Open Jobs</h2>
 
-  <div class="jobTable">
+  <div class="table">
     <div id="sticky-anchor">
       <div id="sticky" class="tableHeader">
         <div class="dataColumn">Job Number</div>
@@ -19,9 +27,9 @@
         <div class="dataColumn">Status</div>
         <div class="dataColumn">Progress</div>
         <div class="dataColumn">Priority</div>
-        <div class="dataColumn hidden">show</div>
-        <div class="dataColumn">edit</div>
-        <div class="dataColumn">destroy</div>
+        <div class="dataColumn hidden btn-header">Finished</div>
+        <div class="dataColumn hidden btn-header">Edit</div>
+        <div class="dataColumn hidden btn-header">Cancel</div>
       </div>
     </div>
 
@@ -35,9 +43,9 @@
       <div class="dataColumn">Status</div>
       <div class="dataColumn">Progress</div>
       <div class="dataColumn">Priority</div>
-      <div class="dataColumn hidden">show</div>
-      <div class="dataColumn">edit</div>
-      <div class="dataColumn">destroy</div>
+      <div class="dataColumn hidden">Finished</div>
+      <div class="dataColumn hidden btn-header">Edit</div>
+      <div class="dataColumn hidden btn-header">Cancel</div>
     </div>
 
     <div id="sortable" class="tableRows">

@@ -4,7 +4,14 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all.preload(:parts)
+    if params[:finished] == 'true'
+      @jobs = Job.where('finished = ?', true).preload(:parts)
+    else
+      @jobs = Job.where('finished = ?', false).preload(:parts)
+    end
+    respond_to do |format|
+      format.html {render 'index'}
+    end
   end
 
   # GET /jobs/1
@@ -42,8 +49,8 @@ class JobsController < ApplicationController
   def update
     respond_to do |format|
       if @job.update(job_params)
-        format.html { redirect_to @job, notice: 'Job was successfully updated.' }
-        format.json { render :show, status: :ok, location: @job }
+        format.html { redirect_to jobs_path, notice: 'Job was successfully updated.' }
+        format.json { render :index, status: :ok, location: @job }
       else
         format.html { render :edit }
         format.json { render json: @job.errors, status: :unprocessable_entity }
@@ -73,6 +80,30 @@ class JobsController < ApplicationController
     end
   end
 
+  def finish
+    @jobs = Job.order(:priority)
+    @job = Job.find(params[:id])
+    @job.update_attribute(:finished, true)
+    @job.update_attribute(:priority, @jobs.last.priority)
+    @job.parts.update_all(finished: true)
+
+    respond_to do |format|
+      format.js {render inline: 'location.reload();'}
+    end
+  end
+
+  def activate
+    @jobs = Job.order(:priority)
+    @job = Job.find(params[:id])
+    @job.update_attribute(:finished, false)
+    @job.update_attribute(:priority, @job.priority_was)
+    @job.parts.update_all(finished: false)
+
+    respond_to do |format|
+      format.js {render inline: 'location.reload();'}
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_job
@@ -80,11 +111,11 @@ class JobsController < ApplicationController
     end
 
     def load_parts
-      @parts = Part.all.includes(:job)
+      @parts = Part.where('job_id = ?', params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority)
+      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority, :finished)
     end
 end

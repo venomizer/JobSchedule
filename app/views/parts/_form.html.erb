@@ -1,7 +1,7 @@
-<%= form_with(urtl: new_job_part_path) do |form| %>
-  <% if part.errors.any? %>
+<%= form_with model: [@job, @part], id: :part_form, local: true do |form| %>
+  <% if @part.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(part.errors.count, "error") %> prohibited this part from being saved:</h2>
+      <h2><%= pluralize(@part.errors.count, "error") %> prohibited this part from being saved:</h2>
 
       <ul>
       <% part.errors.full_messages.each do |message| %>
@@ -11,37 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :partNum %>
+    <%= form.label 'Part Number:' %>
     <%= form.text_field :partNum, id: :part_partNum %>
-  </div>
 
-  <div class="field">
-    <%= form.label :description %>
+    <%= form.label 'Description:' %>
     <%= form.text_area :description, id: :part_description %>
-  </div>
 
-  <div class="field">
-    <%= form.label :quanitity %>
-    <%= form.number_field :quanitity, id: :part_quanitity %>
-  </div>
+    <%= form.label 'Quantity Per Pump:' %>
+    <%= form.number_field :quantity, id: :part_quantity %>
 
-  <div class="field">
-    <%= form.label :totalQuantity %>
+    <%= form.label 'Total Quantity:' %>
     <%= form.number_field :totalQuantity, id: :part_totalQuantity %>
-  </div>
 
-  <div class="field">
-    <%= form.label :workOrder %>
+    <%= form.label 'Work Order Required?' %>
     <%= form.text_field :workOrder, id: :part_workOrder %>
-  </div>
 
-  <div class="field">
-    <%= form.label :finish %>
-    <%= form.check_box :finish, id: :part_finish %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <% content_for :local_menu do %>
+        <%= link_to  job_path(@job) do %>
+            <li class="local-nav-tab">Finish Part</li>
+        <% end %>
+        <%= link_to job_part_path(@job, part), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <li class="local-nav-tab">Cancel Part</li>
+        <% end %>
+        <%= link_to '', onclick:"$('#part_form').submit()" do %>
+            <li class="local-nav-tab">Update Part</li>
+        <% end %>
+    <% end %>
 <% end %>

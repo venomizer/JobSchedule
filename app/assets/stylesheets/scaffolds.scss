@@ -96,10 +96,32 @@ div {
 }
 
 label {
-  display: block;
+  grid-column: 1 / 2;
 }
+
+form{
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-gap: 2%;
+}
+
+.form-grid{
+  width: 80%;
+  margin-left: 20%;
+}
+
+.ui-datepicker {
+  background: silver;
+}
+
+ui.ui-datepicker-header{
+  position: relative;
+  padding: .2em 0;
+  background: grey;
+}
+
 @media screen and (min-width: 800px) {
-  div.jobTable {
+  div.table {
     display: table;
     display: inline-block;
     width: 80%;
@@ -116,12 +138,24 @@ div.tableHeader {
   width: 80%;
 }
 
+.parts-header{
+  background-color: #72595c !important;
+}
+
 div.dataColumn {
   display: table-cell;
   text-align: center;
-  width: 12%;
-  padding: 9px;
+  width: 9%;
+  padding: 15px;
   word-wrap: break-word;
+}
+
+.textColumn{
+  display: table-cell;
+  text-align: center;
+  padding: 15px;
+  word-wrap: break-word;
+  width: 45% !important;
 }
 
 div.tableRows {
@@ -132,8 +166,16 @@ div.data {
   display: table-cell;
   vertical-align: middle;
   word-wrap: break-word;
-  width: 12%;
-  padding: 9px;
+  width: 9%;
+  padding: 5px;
+}
+
+.textData {
+  display: table-cell;
+  vertical-align: middle;
+  word-wrap: break-word;
+  width: 45% !important;
+  padding: 5px;
 }
 
 div.job-block {
@@ -156,9 +198,16 @@ div.even{
   color: white;
 }
 
+.odd-part{
+  background-color: #daa878 !important;
+}
+
+.even-part{
+  background-color: #988084 !important;
+}
+
 div.parts-block {
   display: table-row;
-  background-color: #1a1a1e;
 }
 
 #sticky {
@@ -190,6 +239,8 @@ div.parts-block {
 .hidden {
   color: transparent;
   user-select: none;
+  width: 9% !important;
+  padding: 0 !important;
 }
 
 .nav-bar {
@@ -206,10 +257,107 @@ div.parts-block {
   display: inline;
   float: left;
   padding: 20px;
+
+  &:hover{
+    background-color: #777777;
+  }
 }
 
 .local-nav-tab {
   display: inline;
   float: right;
   padding: 20px;
+
+  &:hover {
+    background-color: #777777;
+  }
+}
+
+.edit-btn{
+  -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+  -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+  background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+  background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+  background-color:#77b55a;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #4b8f29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:11px;
+  font-weight:bold;
+  padding:3px 8px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #5b8a3c;
+}
+
+.delete-btn {
+  -moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+  box-shadow:inset 0px 1px 0px 0px #f5978e;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+  background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+  background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+  background-color:#f24537;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:11px;
+  font-weight:bold;
+  padding:3px 12px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #810e05;
+}
+
+.finish-btn{
+  -moz-box-shadow: 0px 10px 14px -7px #276873;
+  -webkit-box-shadow: 0px 10px 14px -7px #276873;
+  box-shadow: 0px 10px 14px -7px #276873;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+  background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+  background-color:#599bb3;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #29668f;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:11px;
+  font-weight:bold;
+  padding:3px 12px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #3d768a;
+}
+
+input, textarea, select {
+  max-width: 50%;
+}
+
+label {
+  text-align: right;
 }

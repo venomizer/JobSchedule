@@ -1,33 +1,27 @@
-<div class="part-data">Item Number</div>
-<div class="part-data">Part Number</div>
-<div class="part-data">Description</div>
-<div class="part-data">Quantity</div>
-<div class="part-data">Total Quantity</div>
-<div class="part-data">Work Order</div>
-<div class="empty part-data"></div>
-<div class="part-data">Finished?</div>
-<div class="empty part-data"></div>
-<div class="empty part-data"></div>
-<div class="empty part-data"></div>
-<div class="empty part-data"></div>
-
+<div class="tableHeader">
+  <div class="dataColumn">Item Number</div>
+  <div class="dataColumn">Part Number</div>
+  <div class="textColumn">Description</div>
+  <div class="dataColumn">Quantity</div>
+  <div class="dataColumn">Total Quantity</div>
+  <div class="dataColumn">Work Order</div>
+  <div class="dataColumn">Finished?</div>
+  <div class="empty dataColumn"></div>
+</div>
 
 <% job.parts.each do |part| %>
-    <div id="job_<%= part.job_id %>_part_<%= part.id %>" class="row">
-      <div class="part-data"><%= part.id %></div>
-      <div class="part-data"><%= part.partNum %></div>
-      <div class="part-data"><%= part.description %></div>
-      <div class="part-data"><%= part.quantity %></div>
-      <div class="part-data"><%= part.totalQuantity %></div>
-      <div class="part-data"><%= part.workOrder %></div>
-
+    <div class="<%= part.item_num.odd? ? 'odd-part' : 'even-part' %> row">
+      <div class="data"><%= part.item_num %></div>
+      <div class="data"><%= part.partNum %></div>
+      <div class="textData"><%= part.description %></div>
+      <div class="data"><%= part.quantity %></div>
+      <div class="data"><%= part.totalQuantity %></div>
+      <div class="data"><%= part.workOrder %></div>
       <% if part.finished? %>
-          <div class="part-data">Yes</div>
+          <div class="data">Yes</div>
       <% else %>
-          <div class="part-data">No</div>
+          <div class="data"><%= link_to 'Finish', finish_job_part_path(job, part), class:'finish-btn', method: 'put', remote: true %></div>
       <% end %>
-      <div class="empty"></div>
-      <div class="empty"></div>
-      <div class="empty"></div>
+      <div class="data"><%= link_to 'Edit', edit_job_part_path(job, part), class: 'edit-btn' %></div>
     </div>
 <% end %>

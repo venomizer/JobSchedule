@@ -1,5 +1,13 @@
+<% content_for :local_menu do %>
+    <%= link_to '', onclick:"$('#job_form').submit()" do %>
+        <li class="local-nav-tab">Save Job</li>
+    <% end %>
+    <%= link_to jobs_path(finished: true) do %>
+        <li class="local-nav-tab">Return to Jobs</li>
+    <% end %>
+<% end %>
+
+
 <h1>New Job</h1>
 
 <%= render 'form', job: @job %>
-
-<%= link_to 'Back', jobs_path %>

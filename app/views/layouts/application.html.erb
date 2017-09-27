@@ -11,15 +11,29 @@
 
   <body>
   <ul class="nav-bar">
-    <li class="nav-tab"><%= link_to 'Jobs', jobs_url %></li>
-    <li class="nav-tab">Reports</li>
-    <li class="nav-tab">Locations</li>
+    <%= link_to  jobs_path(finished: 'false') do %>
+        <li class="nav-tab">Active Jobs</li>
+    <% end %>
+    <%= link_to  jobs_path do %>
+        <li class="nav-tab">Available Reports</li>
+    <% end %>
+    <%= link_to  jobs_path do %>
+        <li class="nav-tab">Locations</li>
+    <% end %>
+
     <%= yield(:local_menu) %>
   </ul>
   <br />
   <br />
   <br />
   <h1><%= image_tag 'rentzelpumpclean_0'%></h1>
+
+  <% if params[:finished] == 'true' %>
+      <h2>Finished Jobs</h2>
+  <% else %>
+      <h2>Current Jobs</h2>
+  <% end %>
+
   <div>
     <%= yield %>
   </div>
