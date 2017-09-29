@@ -1,0 +1,36 @@
+id,jobNum,poDate,customer,description,needBom,bomDone,status,progress,priority,finished
+1,3972,2015-12-14,Markwest,"Inspect and Repair 12HAH-18T Pump",t,t,Engineering,Ready,1,f
+2,3979,2017-09-13,Markwest,"1 - 5Gal Seal Pot and Stand, 316SS",f,f,Engineering,"Ready - Keep allocated for customer",2,f
+3,4164,2017-01-06,"PT Freeport","1 - 14BCH-2T Pump",f,f,Engineering,"Need to send checks for 14BCH Impellers and Bowls",3,f
+4,4169,,"Operadora de Minas","Various Turbine Parts",f,f,Production,"Ready - Waiting for customer payment",35,t
+5,4199,2017-01-13,"PT Freeport","Packing Box only B/O",f,f,Engineering,"",4,f
+6,4243,2017-06-01,"PT Freeport","1 - Stuffing Assembly 1-1/2in x 5in Regulator",t,t,Engineering,"",5,f
+7,4253,2017-03-17,"PT Freeport","4 - 14BCH Impellers",f,f,Engineering,"",6,f
+8,4258,2017-07-12,"PT Freeport","1 - Stuffing Assembly, 1 - 14BCH Impeller, 1 - Bearing",t,t,Engineering,"",7,f
+9,4279,2017-09-21,"PT Freeport","1 - 1403H-2T Turbine and Various Parts",f,f,Engineering,"",8,f
+10,4286,2017-08-25,"Basin Electric","1 - 8BCAL-2T Turbine Pump",f,f,Engineering,"",9,f
+11,4229,,"RPM - Shawnee","1 - Motor painted Blue",f,f,Production,"",10,f
+12,4230,2017-05-17,"RPM - Shawnee","1 - 300HP Baldor Horizontal  Motor",f,f,Engineering,"",11,f
+13,4231,,"RPM - Shawnee","1 - 150HP WEG Horizontal Motor",f,f,Production,"",12,f
+14,4244,,"RPM - Lubbock","1 - Test Motor",f,f,Production,"",13,f
+15,3493,,Markwest,"Pumps Shipped. Need testing.",f,f,Production,"",14,f
+16,3653,,"RPM - Shawnee","5 - discharges",f,f,Production,"",15,f
+17,3983,,"RPM - Shawnee","10 - Intakes, 316SS",f,f,Production,"",16,f
+18,4085,,"RPM - Shawnee","10 - Re-machine Thrust Chamber Housings",f,f,Production,"",17,f
+19,4201,,"RPM - Shawnee","19 - P6-360 Impellers and Diffusers",f,f,Production,"",18,f
+20,4203,,"RPM - Shawnee","110 - PS02916 Spacer Sleeves, B/O",f,f,Production,"",19,f
+21,4204,,"RPM - Shawnee","48 - PS02645 Shaft Sleeves",f,f,Production,"",20,f
+22,4208,,"RPM - Shawnee","15 - PS01825A ITLP Heads",f,f,Production,"",21,f
+23,4213,,"RPM - Shawnee","10 - PS00759 Discharge, 316SS",f,f,Production,"",22,f
+24,4214,,"RPM - Shawnee","10 - PS01853 ITLP Housing",f,f,Production,"",23,f
+25,4216,,"RPM - Shawnee","10 - PS01854B ITLP Base",f,f,Production,"",24,f
+26,4217,,"RPM - Shawnee","10 - PS00184 TLP Flinger",f,f,Production,"",25,f
+27,4218,,"RPM - Shawnee","10 - PS00243 Seal Plate",f,f,Production,"",26,f
+28,4267,,"RPM - Shawnee","2 - 8SDCH-19T, 2 - 8SDCH-14T, 2 - 17ft Skids, 2 - 15ft Skids",t,t,Production,"",27,f
+29,4272,,"RPM - Shawnee","20 Each - PS03293, PS03275, and PS00392C",f,f,Engineering,"",28,f
+30,4287,,"RPM - Shawnee","4 - PS01855C ITLP Shafts",f,f,Production,"",29,f
+31,4288,,"RPM - Shawnee","1 - Machined Housing",f,f,Production,"",30,f
+32,4297,2017-09-13,"Hamilton Electric","1-15CCH-3T Turbine Pump",t,f,Engineering,"Need BOM and Drawings",34,f
+33,4294,2017-09-08,Petrogas,"1-10ECM-5T Submersible Pump",f,f,Engineering,"Need BOM and Drawings",31,f
+34,4293,2017-09-08,Petrogas,"1-10ECM-5T Submersible Pump",t,f,Engineering,"Need BOM and Drawings",32,f
+35,4292,2017-08-31,"PT Freeport",5-Lineshafts,f,f,Engineering,Machining,33,f

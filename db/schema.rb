@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925133459) do
+ActiveRecord::Schema.define(version: 20170929164049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170925133459) do
     t.integer "priority"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "finished"
+    t.boolean "finished", default: false
   end
 
   create_table "parts", force: :cascade do |t|
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20170925133459) do
     t.datetime "updated_at", null: false
     t.integer "job_id"
     t.integer "quantity"
-    t.boolean "finished"
+    t.boolean "finished", default: false
     t.integer "item_num"
     t.index ["job_id"], name: "index_parts_on_job_id"
   end

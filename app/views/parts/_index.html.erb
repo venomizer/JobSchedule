@@ -20,7 +20,7 @@
       <% if part.finished? %>
           <div class="data">Yes</div>
       <% else %>
-          <div class="data"><%= link_to 'Finish', finish_job_part_path(job, part), class:'finish-btn', method: 'put', remote: true %></div>
+          <div class="data"><%= link_to 'Finish',jobs_path, class:'finish-btn', method: 'put', remote: true %></div>
       <% end %>
       <div class="data"><%= link_to 'Edit', edit_job_part_path(job, part), class: 'edit-btn' %></div>
     </div>
