@@ -2,5 +2,4 @@
 
 <%= render 'form', part: @part %>
 
-<%= link_to 'Show', @part %> |
-<%= link_to 'Back', job_path %>
+<%= link_to 'Back', edit_job_path(@part.job_id) %>

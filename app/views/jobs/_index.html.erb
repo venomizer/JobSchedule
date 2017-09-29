@@ -2,7 +2,7 @@
     <div class="job-block">
       <div id="job_<%= job.id %>" class="<%= job.priority.odd? ? 'odd' : 'even' %> row"  data-update-url="<%= job.id %>">
         <div class="data"><%= job.jobNum %></div>
-        <div class="data"><%= job.poDate %></div>
+        <div class="data"><%= job.poDate.try(:strftime,'%b %d, %Y') %></div>
         <div class="data"><%= job.customer %></div>
         <div class="data"><%= job.description %></div>
         <% if job.needBom? %>
@@ -17,47 +17,57 @@
         <% end %>
         <div class="data"><%= job.status %></div>
         <div class="data"><%= job.progress %></div>
-        <div class="data"><%= job.priority %></div>
-        <div class="data hidden">show</div>
-        <div class="data"><%= link_to 'Edit', edit_job_path(job) %></div>
-        <div class="data"><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        <div class="ui-icon ui-icon-minusthick toggle"></div>
-      </div>
-      <div class="parts-block">
-        <div class="data">Item Number</div>
-        <div class="data">Part Number</div>
-        <div class="data">Description</div>
-        <div class="data">Quantity</div>
-        <div class="data">Total Quantity</div>
-        <div class="data">Work Order</div>
-        <div class="data"></div>
-        <div class="data">Finished?</div>
-        <div class="data"></div>
-        <div class="data"></div>
-        <div class="data"></div>
-        <div class="data"></div>
 
-
-        <% job.parts.each do |part| %>
-            <div id="job_<%= part.job_id %>_part_<%= part.id %>" class="row">
-              <div class="data"><%= part.id %></div>
-              <div class="data"><%= part.partNum %></div>
-              <div class="data"><%= part.description %></div>
-              <div class="data"><%= part.quantity %></div>
-              <div class="data"><%= part.totalQuantity %></div>
-              <div class="data"><%= part.workOrder %></div>
-
-              <% if part.finished? %>
-                  <div class="data">Yes</div>
-              <% else %>
-                  <div class="data">No</div>
-              <% end %>
-              <div class="data"></div>
-              <div class="data"></div>
-              <div class="data"></div>
-            </div>
+        <% if job.finished? %>
+            <div class="data">N/A</div>
+        <% else %>
+            <div class="data"><%= job.priority %></div>
         <% end %>
+
+        <% if job.finished? %>
+            <div class="data"><%= link_to 'Activate', activate_job_path(job, @job), class:'finish-btn', method: 'put', remote: true %></div>
+        <% else %>
+            <div class="data"><%= link_to 'Finish', finish_job_path(job, @job), class:'finish-btn', method: 'put', remote: true %></div>
+        <% end %>
+
+        <div class="data"><%= link_to 'Edit', edit_job_path(job), class: 'edit-btn' %></div>
+        <div class="data"><%= link_to 'Cancel', job, method: :delete, data: { confirm: 'Are you sure?' }, class:'delete-btn' %></div>
       </div>
+      <div class="parts-block parts-header">
+        <div class="dataColumn">Item Number</div>
+        <div class="dataColumn">Part Number</div>
+        <div class="dataColumn hidden">Customer</div>
+        <div class="dataColumn">Description</div>
+        <div class="dataColumn">Quantity/Pump</div>
+        <div class="dataColumn">Total Quantity</div>
+        <div class="dataColumn">Work Order?</div>
+        <div class="dataColumn hidden">Progress</div>
+        <div class="dataColumn hidden">Priority</div>
+        <div class="dataColumn">Finished?</div>
+        <div class="dataColumn hidden">Edit</div>
+        <div class="dataColumn hidden">Cancel</div>
+      </div>
+      <% job.parts.each do |part| %>
+          <div class="parts-block <%= part.item_num.odd? ? 'odd-part' : 'even-part' %>">
+            <div class="data"><%= part.item_num %></div>
+            <div class="data"><%= part.partNum %></div>
+            <div class="data hidden">Customer</div>
+            <div class="data"><%= part.description %></div>
+            <div class="data"><%= part.quantity %></div>
+            <div class="data"><%= part.totalQuantity %></div>
+            <div class="data"><%= part.workOrder %></div>
+            <div class="data hidden">Progress</div>
+            <div class="data hidden">Priority</div>
+            <% if part.finished? %>
+                <div class="data">Yes</div>
+            <% else %>
+                <div class="data"><%= link_to 'Finish', jobs_path, class:'finish-btn' %></div>
+            <% end %>
+            <div class="data"><%= link_to 'Edit', edit_job_part_path(job, part), class: 'edit-btn' %></div>
+            <div class="data hidden">Cancel</div>
+          </div>
+      <% end %>
+
     </div>
 
 

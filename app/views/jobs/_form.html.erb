@@ -1,4 +1,4 @@
-<%= form_with(model: job, local: true) do |form| %>
+<%= form_with(model: job, id: :job_form, local: true) do |form| %>
   <% if job.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
@@ -11,52 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+
     <%= form.label 'Job Number' %>
     <%= form.number_field :jobNum, id: :job_jobNum %>
-  </div>
 
-  <div class="field">
+
     <%= form.label 'Purchase Date' %>
-    <%= form.date_select :poDate, id: :job_poDate %>
-  </div>
+    <%= form.date_field :poDate, id: :job_poDate, data:{provide:'datepicker'} %>
 
-  <div class="field">
     <%= form.label 'Customer' %>
     <%= form.text_field :customer, id: :job_customer %>
-  </div>
 
-  <div class="field">
     <%= form.label 'Description' %>
     <%= form.text_area :description, id: :job_description %>
-  </div>
 
-  <div class="field">
     <%= form.label 'Need BOM?' %>
     <%= form.check_box :needBom, id: :job_needBom %>
-  </div>
 
-  <div class="field">
     <%= form.label 'Is the BOM done?' %>
     <%= form.check_box :bomDone, id: :job_bomDone %>
-  </div>
 
-  <div class="field">
     <%= form.label 'What is the current Status?' %>
     <%= form.select :status, options_for_select([['Engineering'],['Production'],['Finished'],['Shipped']]) %>
-  </div>
 
-  <div class="field">
     <%= form.label 'What is the current Progress?' %>
     <%= form.text_area :progress, id: :job_progress %>
-  </div>
 
-  <div class="field">
     <%= form.label 'Priority' %>
     <%= form.number_field :priority, id: :job_priority %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

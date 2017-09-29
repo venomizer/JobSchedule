@@ -1,23 +1,31 @@
+<% content_for :local_menu do %>
+    <%= link_to  jobs_path do %>
+        <li class="local-nav-tab">Finish Job</li>
+    <% end %>
+    <%= link_to @job, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <li class="local-nav-tab">Cancel Job</li>
+    <% end %>
+    <%= link_to '', onclick:"$('#job_form').submit()" do %>
+        <li class="local-nav-tab">Save Job</li>
+    <% end %>
+    <%= link_to  new_job_part_path(@job) do %>
+        <li class="local-nav-tab">Update Part</li>
+    <% end %>
+    <%= link_to jobs_path, finished: true do %>
+        <li class="local-nav-tab">Return to Jobs</li>
+    <% end %>
+<% end %>
+
 <h1>Editing Job</h1>
 
-<div>
+<div class="form-grid">
   <%= render 'form', job: @job %>
 </div>
-<div>
-  <%= link_to 'New Part', new_job_part_path(@job) %>
-  <div class="tableHeader">
-    <div class="dataColumn">Part Number</div>
-    <div class="dataColumn">Description</div>
-    <div class="dataColumn">Quantity</div>
-    <div class="dataColumn">Total Quantity</div>
-    <div class="dataColumn">Work Order</div>
-    <div class="dataColumn">Finished?</div>
-  </div>
-
-  <div>
+<br />
+<br />
+<br />
+<div class="table">
+  <div class="tableRows">
     <%= render partial: 'parts/index', locals: {job: @job} %>
   </div>
 </div>
-
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>

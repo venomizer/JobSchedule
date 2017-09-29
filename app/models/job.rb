@@ -1,8 +1,7 @@
 class Job < ApplicationRecord
-  before_validation :update_priorities
-  before_update :update_priorities
+  before_save :update_priorities
   validates :priority, :jobNum, uniqueness: true
-  has_many :parts
+  has_many :parts, -> { order(item_num: :asc)}
   default_scope{ order('priority ASC')}
 
   private
