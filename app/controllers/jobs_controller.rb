@@ -4,10 +4,10 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    if params[:finished] == 'true'
-      @jobs = Job.where('finished = ?', true).preload(:parts)
-    else
+    if params[:finished].present? or params[:finished] == 'false'
       @jobs = Job.where('finished = ?', false).preload(:parts)
+    else
+      @jobs = Job.where('finished = ?', true).preload(:parts)
     end
     respond_to do |format|
       format.html {render 'index'}
@@ -35,8 +35,8 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
-        format.json { render :show, status: :created, location: @job }
+        format.html { redirect_to @jobs, notice: 'Job was successfully created.' }
+        format.json { render @jobs, status: :created, location: @job }
       else
         format.html { render :new }
         format.json { render json: @job.errors, status: :unprocessable_entity }
