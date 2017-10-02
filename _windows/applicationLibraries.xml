@@ -450,6 +450,18 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor" />
       </SOURCES>
     </library>
+    <library name="jquery-turbolinks (v2.1.0, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-turbolinks-2.1.0/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-turbolinks-2.1.0/src" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-turbolinks-2.1.0/vendor" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-turbolinks-2.1.0/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-turbolinks-2.1.0/src" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-turbolinks-2.1.0/vendor" />
+      </SOURCES>
+    </library>
     <library name="jquery-ui-rails (v6.0.1, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app" />
