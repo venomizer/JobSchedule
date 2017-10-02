@@ -5,21 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/models/job.rb" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ca1afdc-cff6-4944-9902-a2ea0c9873a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/29a4ef50-148f-4f1e-a717-d1d7b0f63518/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/92390296-7240-4e00-a08e-7c8fcb0332fb/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="7ca1afdc-cff6-4944-9902-a2ea0c9873a1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,11 +62,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-114">
               <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,16 +107,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -552,7 +538,7 @@
       <workItem from="1506347375365" duration="42290000" />
       <workItem from="1506549957587" duration="2832000" />
       <workItem from="1506693093680" duration="12179000" />
-      <workItem from="1506949936250" duration="1414000" />
+      <workItem from="1506949936250" duration="1984000" />
     </task>
     <task id="LOCAL-00001" summary="Major Update 1">
       <created>1505231517037</created>
@@ -593,7 +579,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367126000" />
+    <option name="totallyTimeSpent" value="367696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -935,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yarn.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -985,6 +964,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-114">
           <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
