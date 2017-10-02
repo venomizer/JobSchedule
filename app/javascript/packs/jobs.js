@@ -7,7 +7,7 @@
 //= require_tree .
 
 
-$(document).on('turbolinks:load', function() {
+$(document).ready( function() {
     $(window).scroll(sticky_relocate);
     sticky_relocate();
 
