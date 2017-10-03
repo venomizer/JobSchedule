@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    if params[:finished].present? or params[:finished] == 'false'
+    if params[:finished] == nil or params[:finished] == 'false'
       @jobs = Job.where('finished = ?', false).preload(:parts)
     else
       @jobs = Job.where('finished = ?', true).preload(:parts)
