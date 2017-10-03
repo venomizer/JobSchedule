@@ -18,7 +18,6 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
-    var date = 'M d, y';
     $('#job_poDate').addClass('ui-widget-header ui-helper-clearfix ui-corner-all').datepicker({
         changeMonth: true,
         changeYear: true,
