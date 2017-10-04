@@ -730,6 +730,16 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-2.2.2/manual" />
       </SOURCES>
     </library>
+    <library name="prawn-table (v0.2.2, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-table-0.2.2/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-table-0.2.2/manual" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-table-0.2.2/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-table-0.2.2/manual" />
+      </SOURCES>
+    </library>
     <library name="public_suffix (v3.0.0, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/public_suffix-3.0.0/bin" />
