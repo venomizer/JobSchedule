@@ -680,6 +680,14 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/parser-2.4.0.0/lib" />
       </SOURCES>
     </library>
+    <library name="pdf-core (v0.7.0, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/pdf-core-0.7.0/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/pdf-core-0.7.0/lib" />
+      </SOURCES>
+    </library>
     <library name="pg (v0.21.0, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://$APPLICATION_CONFIG_DIR$/rubystubs/rubystubs24/pg/0.21.0" />
@@ -708,6 +716,18 @@
       </CLASSES>
       <SOURCES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/powerpack-0.1.1/lib" />
+      </SOURCES>
+    </library>
+    <library name="prawn (v2.2.2, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-2.2.2/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-2.2.2/data" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-2.2.2/manual" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-2.2.2/lib" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-2.2.2/data" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-2.2.2/manual" />
       </SOURCES>
     </library>
     <library name="public_suffix (v3.0.0, ruby-2.4.1-p111) [gem]">
@@ -1074,6 +1094,14 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tilt-2.0.8/bin" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tilt-2.0.8/lib" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/tilt-2.0.8/man" />
+      </SOURCES>
+    </library>
+    <library name="ttfunk (v1.5.1, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ttfunk-1.5.1/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ttfunk-1.5.1/lib" />
       </SOURCES>
     </library>
     <library name="turbolinks (v5.0.1, ruby-2.4.1-p111) [gem]">
