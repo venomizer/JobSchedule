@@ -9,8 +9,17 @@ class JobsController < ApplicationController
     else
       @jobs = Job.where('finished = ?', true).preload(:parts)
     end
+
     respond_to do |format|
       format.html {render 'index'}
+      format.pdf do
+        @jobs = Job.all
+        pdf = ReportPdf.new(@jobs)
+        send_data pdf.render,
+                  filename: 'Jobs_report.pdf',
+                  type: 'application/pdf',
+                  disposition: 'inline'
+      end
     end
   end
 
@@ -116,6 +125,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority, :finished)
+      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority, :finished, :dueDate)
     end
 end

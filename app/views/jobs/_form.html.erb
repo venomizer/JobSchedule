@@ -19,6 +19,9 @@
     <%= form.label 'Purchase Date' %>
     <%= form.date_field :poDate, id: :job_poDate, data:{provide:'datepicker'} %>
 
+    <%= form.label 'Due Date' %>
+    <%= form.date_field :dueDate, id: :job_dueDate, data:{provide: 'datepicker'} %>
+
     <%= form.label 'Customer' %>
     <%= form.text_field :customer, id: :job_customer %>
 
