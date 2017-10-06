@@ -4,11 +4,12 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    if params[:finished].present? or params[:finished] == 'false'
+    if params[:finished] == nil or params[:finished] == 'false'
       @jobs = Job.where('finished = ?', false).preload(:parts)
     else
       @jobs = Job.where('finished = ?', true).preload(:parts)
     end
+
     respond_to do |format|
       format.html {render 'index'}
     end
@@ -116,6 +117,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority, :finished)
+      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority, :finished, :dueDate)
     end
 end

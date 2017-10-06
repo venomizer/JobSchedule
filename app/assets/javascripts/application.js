@@ -18,10 +18,21 @@
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
-    var date = 'M d, y';
     $('#job_poDate').addClass('ui-widget-header ui-helper-clearfix ui-corner-all').datepicker({
         changeMonth: true,
         changeYear: true,
         dateFormat: 'yy-mm-dd'
+    });
+
+    $(this).find('#job-input-form').hide();
+    $('.job-report-block')
+        .addClass('ui widget ui-widget-content ui-helper-clearfix ui-corner-all')
+        .find('.job-input')
+        .addClass('ui-widget-header ui-corner-all toggle');
+
+    $('.toggle').unbind('click').bind('click', function(){
+        var icon = $('.job-input');
+        icon.closest('.job-report-block').find('#job-input-form').toggle();
+        $(this).unbind('click');
     });
 });

@@ -36,6 +36,7 @@ pre {
 
 a {
   color: whitesmoke;
+  text-decoration: none;
 
   &:visited {
   }
@@ -145,8 +146,8 @@ div.tableHeader {
 div.dataColumn {
   display: table-cell;
   text-align: center;
-  width: 9%;
-  padding: 15px;
+  width: 8%;
+  padding: 15px 5px;
   word-wrap: break-word;
 }
 
@@ -166,7 +167,7 @@ div.data {
   display: table-cell;
   vertical-align: middle;
   word-wrap: break-word;
-  width: 9%;
+  width: 8%;
   padding: 5px;
 }
 
@@ -360,4 +361,22 @@ input, textarea, select {
 
 label {
   text-align: right;
+}
+
+.list-buttons {
+  margin-left: 40% !important;
+  list-style-type: none;
+  display: block;
+  text-align: center;
+  background-color: #1a1a1e;
+  margin-right: 30px;
+  width: 20%;
+  line-height: 60px;
+  a {
+    text-decoration: none !important;
+  }
+  &:hover{
+    background-color: #777777;
+    text-decoration: none;
+  }
 }

@@ -5,7 +5,7 @@
     <%= link_to jobs_path(finished: true) do %>
         <li class="local-nav-tab">Finished Jobs</li>
     <% end %>
-    <%= link_to  jobs_path do %>
+    <%= link_to  reports_path do %>
         <li class="local-nav-tab">New Job Report</li>
     <% end %>
     <%= link_to  new_job_path do %>
@@ -20,6 +20,7 @@
       <div id="sticky" class="tableHeader">
         <div class="dataColumn">Job Number</div>
         <div class="dataColumn">P.O. Date</div>
+        <div class="dataColumn">Due Date</div>
         <div class="dataColumn">Customer</div>
         <div class="dataColumn">Description</div>
         <div class="dataColumn">Need BOM</div>
@@ -36,6 +37,7 @@
     <div class="tableHeader">
       <div class="dataColumn">Job Number</div>
       <div class="dataColumn">P.O. Date</div>
+      <div class="dataColumn">Due Date</div>
       <div class="dataColumn">Customer</div>
       <div class="dataColumn">Description</div>
       <div class="dataColumn">Need BOM</div>

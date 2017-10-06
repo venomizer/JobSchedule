@@ -3,6 +3,7 @@
       <div id="job_<%= job.id %>" class="<%= job.priority.odd? ? 'odd' : 'even' %> row"  data-update-url="<%= job.id %>">
         <div class="data"><%= job.jobNum %></div>
         <div class="data"><%= job.poDate.try(:strftime,'%b %d, %Y') %></div>
+        <div class="data"><%= job.dueDate.try(:strftime, '%b %d, %Y') %></div>
         <div class="data"><%= job.customer %></div>
         <div class="data"><%= job.description %></div>
         <% if job.needBom? %>
