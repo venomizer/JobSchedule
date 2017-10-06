@@ -12,14 +12,6 @@ class JobsController < ApplicationController
 
     respond_to do |format|
       format.html {render 'index'}
-      format.pdf do
-        @jobs = Job.all
-        pdf = ReportPdf.new(@jobs)
-        send_data pdf.render,
-                  filename: 'Jobs_report.pdf',
-                  type: 'application/pdf',
-                  disposition: 'inline'
-      end
     end
   end
 

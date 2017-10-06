@@ -36,6 +36,7 @@ pre {
 
 a {
   color: whitesmoke;
+  text-decoration: none;
 
   &:visited {
   }
@@ -360,4 +361,22 @@ input, textarea, select {
 
 label {
   text-align: right;
+}
+
+.list-buttons {
+  margin-left: 40% !important;
+  list-style-type: none;
+  display: block;
+  text-align: center;
+  background-color: #1a1a1e;
+  margin-right: 30px;
+  width: 20%;
+  line-height: 60px;
+  a {
+    text-decoration: none !important;
+  }
+  &:hover{
+    background-color: #777777;
+    text-decoration: none;
+  }
 }

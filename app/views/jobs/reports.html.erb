@@ -1,7 +1,26 @@
 <h1>Please select a report:</h1>
-<ul>
-  <li><%= link_to 'Active jobs', jobs_path(finished: false) %></li>
-  <li><%= link_to 'Finished Jobs', jobs_path(finished: true) %></li>
-  <li><%= link_to 'Job Summary', jobs_path(finished: false) %></li>
-  <li><%= link_to 'Bill of Materials', jobs_path(finished: false) %></li>
-</ul>
+
+<%= link_to  reports_active_jobs_path(format: 'pdf') do %>
+    <div class="list-buttons">Active Jobs Report</div>
+<% end %>
+<br />
+<%= link_to  reports_finished_jobs_path(format: 'pdf') do %>
+    <div class="list-buttons">Finished Jobs Report</div>
+<% end %>
+<br />
+
+<%= link_to  reports_job_summary_path(format: 'pdf'), class:'job-input' do %>
+<% end %>
+<div class="job-report-block">
+  <div class="job-input list-buttons">
+    Individual Job Summary
+    <div id="job-input-form" class="odd">
+      <%= select_tag 'Job Number',options_from_collection_for_select(@jobs, 'id', 'jobNum') %>
+    </div>
+  </div>
+</div>
+<br />
+<%= link_to  jobs_path do %>
+    <div class="list-buttons job-input">Bill of Materials for Specific Job</div>
+<% end %>
+<br />
