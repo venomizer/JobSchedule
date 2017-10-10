@@ -35,6 +35,18 @@ class ReportsController < ApplicationController
   end
 
   def job_summary
+    @jobs = Job.all.preload(:parts)
+    @job = Job.find_by_jobNum(params[:jobNum])
+    respond_to do |format|
+      format.pdf do
+        pdf = SingleJobReportPdf.new(@job)
+        send_data pdf.render,
+                  filename: "Job_#{@job.jobNum}",
+                  type: 'application/pdf',
+                  disposition: 'inline'
+      end
+      format.html {render 'jobs/reports'}
+    end
   end
 
   def bill_of_materials

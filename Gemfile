@@ -58,3 +58,4 @@ ruby '2.4.1'
 #PDF reports
 gem 'prawn'
 gem 'prawn-table'
+gem 'responders'
