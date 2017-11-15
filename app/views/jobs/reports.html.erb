@@ -9,18 +9,25 @@
 <% end %>
 <br />
 
-<%= link_to  reports_job_summary_path(format: 'pdf'), class:'job-input' do %>
-<% end %>
-<div class="job-report-block">
-  <div class="job-input list-buttons">
+<div id="job-sum-block" class="job-report-block">
+  <div id="job_sum" class="job-input list-buttons">
     Individual Job Summary
-    <div id="job-input-form" class="odd">
-      <%= select_tag 'Job Number',options_from_collection_for_select(@jobs, 'id', 'jobNum') %>
-    </div>
+  </div>
+  <div class="job-input-form odd">
+    <% jobNum_array = @jobs.map {|job| ["#{job.jobNum}"]} %>
+    <%= select_tag(:job_jobNum, options_for_select(jobNum_array)) %>
+    <%= link_to 'Report', job_summary_report_path_path(@job, format: 'pdf'), class: 'finish-btn report', id: 'report-link' %>
   </div>
 </div>
 <br />
-<%= link_to  jobs_path do %>
-    <div class="list-buttons job-input">Bill of Materials for Specific Job</div>
-<% end %>
+<div id="job-bom-block" class="job-report-block">
+  <div id="job_bom" class="job-input list-buttons">
+    Bill of Materials for Specific Job
+  </div>
+  <div class="job-input-form odd">
+    <% jobNum_array = Job.all.map {|job| [job.jobNum]} %>
+    <%= select(:job, :jobNum, options_for_select(jobNum_array)) %>
+    <%= link_to 'Report', reports_Bill_of_Materials_path(format: 'pdf'), class:'finish-btn report', id:'bill_of_materials' %>
+  </div>
+</div>
 <br />

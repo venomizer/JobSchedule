@@ -369,14 +369,22 @@ label {
   display: block;
   text-align: center;
   background-color: #1a1a1e;
-  margin-right: 30px;
   width: 20%;
   line-height: 60px;
   a {
     text-decoration: none !important;
+    width: 20% !important;
   }
   &:hover{
     background-color: #777777;
     text-decoration: none;
   }
+}
+
+.job-input-form {
+  margin-left: 40% !important;
+  text-align: center;
+  margin-right: 30px;
+  padding: 20px 0;
+  width: 20%;
 }
