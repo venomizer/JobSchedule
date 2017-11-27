@@ -42,9 +42,11 @@ $(document).on('turbolinks:load', function() {
             icon.closest('#job-bom-block').find('.job-input-form').toggle();
         }
     });
+    $('#Job_Report').on('change', function(){
+        $('#report-link').attr('href', 'reports/job_summary/' + $('#Job_Report').val() + '.pdf');
+    });
 
-    $('#report-link').on('click', function(){
-        var jobNum = $('#job_jobNum option:selected').val();
-        window.load('/reports/job_summary?jobNum=' + jobNum);
+    $('#Job_BOM').on('change', function(){
+        $('#bom-link').attr('href', 'reports/bill_of_materials/' + $('#Job_BOM').val() + '.pdf');
     });
 });

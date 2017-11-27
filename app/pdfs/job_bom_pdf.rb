@@ -1,4 +1,4 @@
-class SingleJobReportPdf < Prawn::Document
+class JobBomPdf < Prawn::Document
   def initialize(job)
     super(page_size: [792, 1224], page_layout: :portrait)
     @job = job
@@ -13,7 +13,7 @@ class SingleJobReportPdf < Prawn::Document
           scale: 0.75
     move_down 50
 
-    text "Job #{@job.jobNum}: Summary Report - #{Time.now.strftime('%b %d, %Y')}",
+    text "Job #{@job.jobNum}: Bill of Materials - #{Time.now.strftime('%b %d, %Y')}",
          size: 24,
          style: :bold,
          align: :center
