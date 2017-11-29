@@ -14,7 +14,7 @@
     Individual Job Summary
   </div>
   <div class="job-input-form odd">
-    <%= select_tag 'Job Report', options_from_collection_for_select(@jobs, 'jobNum', 'jobNum') %>
+    <%= select_tag 'Job Report', options_from_collection_for_select(@jobs, 'jobNum', 'jobNum'), include_blank: true %>
     <%= link_to 'Generate Report', job_report_path(jobNum: ' ', format: 'pdf'), class: 'finish-btn report', id: 'report-link' %>
   </div>
 </div>
