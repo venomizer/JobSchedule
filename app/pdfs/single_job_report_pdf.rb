@@ -1,7 +1,7 @@
 class SingleJobReportPdf < Prawn::Document
   def initialize(job)
     super(page_size: [792, 1224], page_layout: :portrait)
-    @job = job.preload(:parts)
+    @job = job
     @parts = job.parts.all
     report_title
     report_info
