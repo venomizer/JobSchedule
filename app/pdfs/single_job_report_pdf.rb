@@ -1,7 +1,7 @@
 class SingleJobReportPdf < Prawn::Document
   def initialize(job)
     super(page_size: [792, 1224], page_layout: :portrait)
-    @job = job
+    @job = job.preload(:parts)
     @parts = job.parts.all
     report_title
     report_info
@@ -59,6 +59,7 @@ class SingleJobReportPdf < Prawn::Document
     text "<b><u>Status:</u></b> #{@job.status}",
          inline_format: true
   end
+
   def line_items
     [['Item No.', 'Part No.', 'Description', 'Quantity', 'Total Qty', 'Work Order', 'Status']] +
         @parts.map do |part|
