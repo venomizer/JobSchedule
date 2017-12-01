@@ -156,6 +156,14 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ast-2.3.0/lib" />
       </SOURCES>
     </library>
+    <library name="bigdecimal (v1.3.0, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/bigdecimal" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/bigdecimal" />
+      </SOURCES>
+    </library>
     <library name="bindex (v0.5.0, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://$APPLICATION_CONFIG_DIR$/rubystubs/rubystubs24/bindex/0.5.0" />
@@ -292,6 +300,24 @@
       <SOURCES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.2.beta10/ext" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.2.beta10/lib" />
+      </SOURCES>
+    </library>
+    <library name="debase (v0.2.2.beta11, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.2.beta11/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.2.beta11/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.2.beta11/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-0.2.2.beta11/lib" />
+      </SOURCES>
+    </library>
+    <library name="debase-ruby_core_source (v0.10.0, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-ruby_core_source-0.10.0/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/debase-ruby_core_source-0.10.0/lib" />
       </SOURCES>
     </library>
     <library name="debase-ruby_core_source (v0.9.9, ruby-2.4.1-p111) [gem]">
@@ -470,6 +496,14 @@
       <SOURCES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/lib" />
+      </SOURCES>
+    </library>
+    <library name="json (v2.0.2, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/json/add" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/json/add" />
       </SOURCES>
     </library>
     <library name="loofah (v2.0.3, ruby-2.4.1-p111) [gem]">
@@ -662,6 +696,14 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/nokogiri-1.8.1-x64-mingw32/suppressions" />
       </SOURCES>
     </library>
+    <library name="openssl (v2.0.3, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/openssl" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/openssl" />
+      </SOURCES>
+    </library>
     <library name="parallel (v1.12.0, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/parallel-1.12.0/lib" />
@@ -738,6 +780,20 @@
       <SOURCES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-table-0.2.2/lib" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/prawn-table-0.2.2/manual" />
+      </SOURCES>
+    </library>
+    <library name="psych (v2.2.2, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/visitors" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/handlers" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/nodes" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/json" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/visitors" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/handlers" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/nodes" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/psych/json" />
       </SOURCES>
     </library>
     <library name="public_suffix (v3.0.0, ruby-2.4.1-p111) [gem]">
@@ -914,6 +970,30 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/rb-inotify-0.9.10/lib" />
       </SOURCES>
     </library>
+    <library name="rdoc (v5.0.0, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/i18n" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/generator" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/rd" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/parser" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/stats" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/context" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/markup" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/markdown" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/ri" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/i18n" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/generator" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/rd" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/parser" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/stats" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/context" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/markup" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/markdown" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/2.4.0/rdoc/ri" />
+      </SOURCES>
+    </library>
     <library name="responders (v2.4.0, ruby-2.4.1-p111) [gem]">
       <CLASSES>
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/responders-2.4.0/lib" />
@@ -934,6 +1014,18 @@
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/rubocop-0.49.1/lib" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/rubocop-0.49.1/assets" />
         <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/rubocop-0.49.1/config" />
+      </SOURCES>
+    </library>
+    <library name="ruby-debug-ide (v0.6.1.beta10, ruby-2.4.1-p111) [gem]">
+      <CLASSES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta10/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta10/bin" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta10/lib" />
+      </CLASSES>
+      <SOURCES>
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta10/ext" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta10/bin" />
+        <root url="file://C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/ruby-debug-ide-0.6.1.beta10/lib" />
       </SOURCES>
     </library>
     <library name="ruby-debug-ide (v0.6.1.beta4, ruby-2.4.1-p111) [gem]">
