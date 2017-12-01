@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pumps
   get 'welcome/index'
   root 'welcome#index'
 
@@ -12,6 +13,9 @@ Rails.application.routes.draw do
     member do
       put 'finish'
       put 'activate'
+    end
+
+    resources :pumps do
     end
   end
 

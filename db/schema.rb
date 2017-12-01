@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005133043) do
+ActiveRecord::Schema.define(version: 20171130211400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20171005133043) do
     t.datetime "updated_at", null: false
     t.boolean "finished", default: false
     t.date "dueDate"
+    t.string "work_type"
   end
 
   create_table "parts", force: :cascade do |t|
@@ -44,6 +45,20 @@ ActiveRecord::Schema.define(version: 20171005133043) do
     t.boolean "finished", default: false
     t.integer "item_num"
     t.index ["job_id"], name: "index_parts_on_job_id"
+  end
+
+  create_table "pumps", force: :cascade do |t|
+    t.string "product_type"
+    t.integer "stages"
+    t.integer "flowrate"
+    t.integer "dev_head"
+    t.string "assembly"
+    t.text "restrictions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "quantity"
+    t.bigint "job_id"
+    t.index ["job_id"], name: "index_pumps_on_job_id"
   end
 
 end
