@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product type:</strong>
+  <%= @pump.product_type %>
+</p>
+
+<p>
+  <strong>Stages:</strong>
+  <%= @pump.stages %>
+</p>
+
+<p>
+  <strong>Flowrate:</strong>
+  <%= @pump.flowrate %>
+</p>
+
+<p>
+  <strong>Dev head:</strong>
+  <%= @pump.dev_head %>
+</p>
+
+<p>
+  <strong>Assembly:</strong>
+  <%= @pump.assembly %>
+</p>
+
+<p>
+  <strong>Restrictions:</strong>
+  <%= @pump.restrictions %>
+</p>
+
+<%= link_to 'Edit', edit_pump_path(@pump) %> |
+<%= link_to 'Back', pumps_path %>

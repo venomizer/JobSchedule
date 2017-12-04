@@ -35,9 +35,12 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
 
     respond_to do |format|
-      if @job.save
-        format.html { redirect_to @jobs, notice: 'Job was successfully created.' }
-        format.json { render @jobs, status: :created, location: @job }
+      if @job.save&&@job.work_type.exclude?('Pump')
+        format.html { redirect_to jobs_path, notice: 'Job was successfully created.' }
+        format.json { render @job, status: :created, location: @job }
+      elsif @job.save&&@job.work_type.include?('Pump')
+        format.html { redirect_to new_job_pump_path(@job.id), notice: 'Job was successfully created.' }
+        format.json { render @job, status: :created, location: @job }
       else
         format.html { render :new }
         format.json { render json: @job.errors, status: :unprocessable_entity }
@@ -117,6 +120,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority, :finished, :dueDate)
+      params.require(:job).permit(:jobNum, :poDate, :customer, :description, :needBom, :bomDone, :status, :progress, :priority, :finished, :dueDate, :work_type)
     end
 end

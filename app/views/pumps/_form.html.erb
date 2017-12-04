@@ -1,0 +1,52 @@
+<%= form_with(model: [@job, @pump], local: true) do |form| %>
+  <% if @pump.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pump.errors.count, "error") %> prohibited this pump from being saved:</h2>
+
+      <ul>
+      <% pump.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label 'Product Type' %>
+    <%= form.text_field :product_type, id: :pump_product_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Stages' %>
+    <%= form.number_field :stages, id: :pump_stages %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Required Flowrate' %>
+    <%= form.number_field :flowrate, id: :pump_flowrate %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Total Developed Head (TDH)' %>
+    <%= form.number_field :dev_head, id: :pump_dev_head %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Required Assembly' %>
+    <%= form.text_field :assembly, id: :pump_assembly %>
+  </div>
+
+  <div>
+    <%= form.label 'Quantity' %>
+    <%= form.number_field :quantity, id: :pump_quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Restrictions' %>
+    <%= form.text_area :restrictions, id: :pump_restrictions %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

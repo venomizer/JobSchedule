@@ -1,6 +1,8 @@
 class ReportsController < ApplicationController
   def index
     @jobs = Job.all
+    @sel_job = {}
+    @sel_job = params[:sel_jobNum]
     respond_to do |format|
       format.html {render 'jobs/reports'}
     end
@@ -35,20 +37,32 @@ class ReportsController < ApplicationController
   end
 
   def job_summary
-    @jobs = Job.all.preload(:parts)
     @job = Job.find_by_jobNum(params[:jobNum])
     respond_to do |format|
       format.pdf do
         pdf = SingleJobReportPdf.new(@job)
         send_data pdf.render,
-                  filename: "Job_#{@job.jobNum}",
+                  filename: 'Job_Report.pdf',
                   type: 'application/pdf',
                   disposition: 'inline'
       end
-      format.html {render 'jobs/reports'}
     end
   end
 
   def bill_of_materials
+    @job = Job.find_by_jobNum(params[:jobNum])
+    respond_to do |format|
+      format.pdf do
+        pdf = JobBomPdf.new(@job)
+        send_data pdf.render,
+                  filename: 'Job_Report.pdf',
+                  type: 'application/pdf',
+                  disposition: 'inline'
+      end
+    end
+  end
+
+  def show
+    @job = Job.find_by_jobNum(params[:jobNum])
   end
 end
