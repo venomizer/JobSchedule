@@ -63,7 +63,6 @@ class PumpsController < ApplicationController
   # DELETE /pumps/1
   # DELETE /pumps/1.json
   def destroy
-    @job = Job.find(params[:job_id])
     @pump = Pump.find_by job_id: @job.id, id: params[:id]
 
     @pump.destroy
@@ -77,7 +76,8 @@ class PumpsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_job
-      @job = Job.find(params[:job_id])
+      @pump = Pump.find(params[:id])
+      @job = Job.find(@pump.job_id)
     end
     def set_pump
       @pump = Pump.find(params[:id])
@@ -85,6 +85,6 @@ class PumpsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pump_params
-      params.require(:pump).permit(:product_type, :stages, :flowrate, :dev_head, :assembly, :restrictions, :quantity, :job_id)
+      params.require(:pump).permit(:product_type, :stages, :flowrate, :dev_head, :assembly, :restrictions, :quantity, :job_id, :item_num)
     end
 end

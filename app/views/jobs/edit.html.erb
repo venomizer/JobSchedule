@@ -11,7 +11,7 @@
     <%= link_to  new_job_part_path(@job) do %>
         <li class="local-nav-tab">New Part</li>
     <% end %>
-    <%= link_to jobs_path, finished: true do %>
+    <%= link_to jobs_path, finished: false do %>
         <li class="local-nav-tab">Return to Jobs</li>
     <% end %>
 <% end %>
@@ -24,8 +24,24 @@
 <br />
 <br />
 <br />
-<div class="table">
-  <div class="tableRows">
-    <%= render partial: 'parts/index', locals: {job: @job} %>
+
+<% if @job.pumps.exists? %>
+  <h2>Pumps:</h2>
+  <div class="table">
+    <div class="tableRows">
+      <%= render partial: 'pumps/index', locals: {job: @job} %>
+    </div>
   </div>
-</div>
+<% else %>
+<% end %>
+
+<% if @job.parts.exists? %>
+
+  <h2>Parts:</h2>
+  <div class="table">
+    <div class="tableRows">
+      <%= render partial: 'parts/index', locals: {job: @job} %>
+    </div>
+  </div>
+<% else %>
+<% end %>

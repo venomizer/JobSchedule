@@ -1,27 +1,38 @@
 <div class="tableHeader">
   <div class="dataColumn">Item Number</div>
   <div class="dataColumn">Part Number</div>
+  <div class="dataColumn hidden">Customer</div>
   <div class="textColumn">Description</div>
+  <div class="dataColumn hidden">Need BOM</div>
+  <div class="dataColumn hidden">BOM Done</div>
   <div class="dataColumn">Quantity</div>
   <div class="dataColumn">Total Quantity</div>
   <div class="dataColumn">Work Order</div>
+  <div class="dataColumn hidden">Priority</div>
   <div class="dataColumn">Finished?</div>
-  <div class="empty dataColumn"></div>
+  <div class="dataColumn hidden">Edit</div>
+  <div class="dataColumn hidden">Cancel</div>
+
 </div>
 
 <% job.parts.each do |part| %>
     <div class="<%= part.item_num.odd? ? 'odd-part' : 'even-part' %> row">
       <div class="data"><%= part.item_num %></div>
       <div class="data"><%= part.partNum %></div>
+      <div class="data hidden">Customer</div>
       <div class="textData"><%= part.description %></div>
+      <div class="data hidden">Need BOM</div>
+      <div class="data hidden">BOM Done</div>
       <div class="data"><%= part.quantity %></div>
       <div class="data"><%= part.totalQuantity %></div>
       <div class="data"><%= part.workOrder %></div>
+      <div class="data hidden">progress</div>
       <% if part.finished? %>
           <div class="data">Yes</div>
       <% else %>
           <div class="data"><%= link_to 'Finish',jobs_path, class:'finish-btn', method: 'put', remote: true %></div>
       <% end %>
       <div class="data"><%= link_to 'Edit', edit_job_part_path(job, part), class: 'edit-btn' %></div>
+      <div class="data"><%= link_to 'Cancel', job_part_path(job, part), method: :delete, data: {confirm: 'Are you sure?'}, class: 'delete-btn' %></div>
     </div>
 <% end %>

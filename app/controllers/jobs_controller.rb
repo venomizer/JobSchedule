@@ -5,9 +5,9 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     if params[:finished] == nil or params[:finished] == 'false'
-      @jobs = Job.where('finished = ?', false).preload(:parts)
+      @jobs = Job.where('finished = ?', false).preload(:parts, :pumps)
     else
-      @jobs = Job.where('finished = ?', true).preload(:parts)
+      @jobs = Job.where('finished = ?', true).preload(:parts, :pumps)
     end
 
     respond_to do |format|
@@ -73,7 +73,7 @@ class JobsController < ApplicationController
   end
 
   def sort
-    @jobs = Job.all.preload(:parts)
+    @jobs = Job.all.preload(:parts, :pumps)
     old_priority = params[:oldPriority].to_i+1
     new_priority = params[:newPriority].to_i+1
     @job = Job.find_by_priority(old_priority)
