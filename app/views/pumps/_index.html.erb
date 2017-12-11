@@ -1,0 +1,23 @@
+<div class="tableHeader">
+  <div class="dataColumn">Item Number</div>
+  <div class="dataColumn">Pump Type</div>
+  <div class="dataColumn">Stages</div>
+  <div class="dataColumn">Flow Rate</div>
+  <div class="dataColumn">Total Developed Head (TDH)</div>
+  <div class="dataColumn">Provided Assemblies</div>
+  <div class="dataColumn">Quantity</div>
+  <div class="dataColumn">Restrictions</div>
+</div>
+
+<% job.pumps.each do |pump| %>
+  <div class="<%= pump.item_num.odd? ? 'odd-part' : 'even-part' %> row">
+    <div class="data"><%= pump.item_num %></div>
+    <div class="data"><%= pump.product_type %></div>
+    <div class="data"><%= pump.stages %></div>
+    <div class="data"><%= pump.flowrate %></div>
+    <div class="data"><%= pump.dev_head %></div>
+    <div class="data"><%= pump.assembly %></div>
+    <div class="data"><%= pump.quantity %></div>
+    <div class="data"><%= pump.restrictions %></div>
+  </div>
+<% end %>

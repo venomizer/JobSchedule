@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label 'Item Number' %>
+    <%= form.text_field :item_num, id: :pump_item_num %>
+  </div>
+
+  <div class="field">
     <%= form.label 'Stages' %>
     <%= form.number_field :stages, id: :pump_stages %>
   </div>

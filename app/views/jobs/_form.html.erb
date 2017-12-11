@@ -23,7 +23,7 @@
     <%= form.date_field :dueDate, id: :job_dueDate, data:{provide: 'datepicker'} %>
 
     <%= form.label 'Type of Job' %>
-    <%= form.select :work_type, options_for_select([['Horizontal Pump'], ['Vertical Pump'], ['Motor'], ['Repair'], ['Replacement Parts']]), include_blank: true, id: :job_type %>
+    <%= form.select :work_type, options_for_select(['Horizontal Pump', 'Vertical Pump', 'Motor', 'Repair', 'Replacement Parts'], selected: form.object.work_type), include_blank: true, id: :job_type %>
 
     <%= form.label 'Customer' %>
     <%= form.text_field :customer, id: :job_customer %>
@@ -38,7 +38,7 @@
     <%= form.check_box :bomDone, id: :job_bomDone %>
 
     <%= form.label 'What is the current Status?' %>
-    <%= form.select :status, options_for_select([['Engineering'],['Production'],['Finished'],['Shipped']]) %>
+    <%= form.select :status, options_for_select([['Engineering'],['Production'],['Finished'],['Shipped']], selected: form.object.status), include_blank: true %>
 
     <%= form.label 'What is the current Progress?' %>
     <%= form.text_area :progress, id: :job_progress %>
